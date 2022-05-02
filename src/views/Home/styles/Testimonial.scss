@@ -1,2 +1,15 @@
 @import '../../../styles/components/_vars.scss';
 @import '../../../styles/components/_mixins.scss';
+
+.testimonial{
+    background: $dark;
+    padding: 100px 0  150px 0;
+
+    .container{
+        .the-title{
+            h2{
+                color: $white;
+            }
+        }
+    }
+}

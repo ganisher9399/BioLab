@@ -2,6 +2,9 @@
   <section class="testimonial">
       <div class="container">
          <TheTitle :sub="sub" :title="title" />
+         <div class="customers">
+           <div class="customers-box"></div>
+         </div>
       </div>
   </section>
 </template>
