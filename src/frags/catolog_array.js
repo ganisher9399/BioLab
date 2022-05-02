@@ -1,0 +1,51 @@
+export default  [
+   {
+       img: require('../images/prodacts/p1.png'),
+       title: 'Medium Capacity, Multi-Purpose Centrifuges',
+       id: 'id1',
+       old_price: '1500 $',
+       new_price: '1000$',
+       icon: 'fas fa-plus',
+   },
+   {
+        img: require('../images/prodacts/p2.png'),
+        title: 'Medium Capacity, Multi-Purpose Centrifuges',
+        id: 'id2',
+        old_price: '1500 $',
+        new_price: '1000$',
+        icon: 'fas fa-plus',
+    },     
+    {
+        img: require('../images/prodacts/p3.png'),
+        title: 'Medium Capacity, Multi-Purpose Centrifuges',
+        id: 'id3',
+        old_price: '1500 $',
+        new_price: '1000$',
+        icon: 'fas fa-plus',
+    }, 
+    {
+        img: require('../images/prodacts/p4.png'),
+        title: 'Medium Capacity, Multi-Purpose Centrifuges',
+        id: 'id4',
+        old_price: '1500 $',
+        new_price: '1000$',
+        icon: 'fas fa-plus',
+    }, 
+    {
+        img: require('../images/prodacts/p1.png'),
+        title: 'Medium Capacity, Multi-Purpose Centrifuges',
+        id: 'id1',
+        old_price: '1500 $',
+        new_price: '1000$',
+        icon: 'fas fa-plus',
+    },
+    {
+        img: require('../images/prodacts/p1.png'),
+        title: 'Medium Capacity, Multi-Purpose Centrifuges',
+        id: 'id1',
+        old_price: '1500 $',
+        new_price: '1000$',
+        icon: 'fas fa-plus',
+    },              
+
+]

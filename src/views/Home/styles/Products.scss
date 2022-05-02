@@ -1,0 +1,71 @@
+@import '../../../styles/components/_vars.scss';
+@import '../../../styles/components/_mixins.scss';
+
+.products{
+    padding: 0 0 100px 0;
+
+    .container{
+      .swiper2{
+          
+        width: 100%;
+        padding: 90px 0 100px 0;
+        //Media 
+        @include sm{
+            padding: 70px 0 80px 0; 
+        }
+
+        .swiper-slide{
+            .Cotolog{
+              //Media
+              @include xxl{
+                width: 350px;
+              }
+              @include md{
+                width: 400px;
+              }
+              @include sm{
+                  width: 100%;
+              }
+            }
+        }
+
+        .swiper-pagination{
+            .swiper-pagination-bullet{
+                width: 30px;
+                height: 4px;
+                background: rgba($black, $alpha: 0.4);
+                border-radius: 0px;
+
+
+                //Media
+                @include xxl{
+                    width: 15px;
+                    height: 3px;
+                }
+                @include md{
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                }
+
+                &.swiper-pagination-bullet-active{
+                    width: 30px;
+                    height: 5px;
+                    background: $brand_color;
+
+                    //Media
+                    @include xxl{
+                        width: 15px;
+                        height: 4px;
+                    }
+                    @include md{
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+      }
+    }
+}

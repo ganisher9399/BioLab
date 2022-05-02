@@ -1,0 +1,184 @@
+@import '../../styles/components/_vars.scss';
+@import '../../styles/components/_mixins.scss';
+
+.header{
+    padding: 66px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    transition: 0.5s;
+    
+    
+    //Media
+    @include lg{
+      padding: 45px 0;
+      position: fixed;
+    }
+
+    &.active{
+      background: rgba($white , $alpha: 1);
+      padding: 30px 0;
+      position: fixed;
+      
+    }
+
+    .navbar{
+        display: flex;
+        align-items: center;
+
+        .logo{
+          font-size: 30px;
+          font-weight: 600; 
+          z-index: 9999;  
+
+          a{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
+        }
+
+        .mobile-menu{
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 250px;
+          height: 100%;
+          min-height: 100vh;
+          background: $white;
+          padding: 110px 10px 40px 25px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          z-index: 999;
+          transform: translateX(-100%);
+          transition: transform 0.5s ease-in;
+
+          &.active{
+            transform: translateX(0);
+          }
+
+          ul{
+            li{
+              .link{
+                padding: 20px 0;
+              }
+            }
+          }
+          .mobile-search{
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 18px;
+            color: $brand_color;
+            border: 1px solid $brand_color;
+            border-radius: 50px;
+          }
+        }
+
+        .burger{
+          margin-left: auto;
+          transform: translateY(3px);
+          transform: rotateY(180deg);
+        }
+
+        .menu{
+            display: flex;
+
+            li{
+                .link{
+                    margin-left: 62px;
+                    font-size: 20px;
+                    //Media
+                    @include xl{
+                      font-size: 16px;
+                      margin-left: 30px;
+                    }
+
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+
+        }
+
+        .actions{
+          margin-left: auto;  
+          display: flex;
+          align-items: center;
+          // Media
+          @include lg{
+            margin-left: auto;
+            margin-right: 20px;
+            
+          }
+
+          .search{
+            font-size: 25px;
+            cursor: pointer;
+            //Media
+            @include xl{
+              font-size: 18px;
+            }
+            
+          }
+
+          .language{
+            
+            margin-left: 33px;
+            font-size: 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            @include xl{
+              font-size: 16px;
+              
+            }
+
+            
+
+            i{
+              position: relative;
+              left: 10px;
+              font-size: 15px;
+              transition: 0.4s;
+            }
+
+            .dropdown{
+              position: absolute;
+              width: 150%;
+              background: $white;
+              text-align: center;
+              top: 40px;
+              left: 40%;
+              transform: translateX(-50%) translateY(-20px);
+              box-shadow: 0  0 10px rgba($black , $alpha: 0.2);
+              opacity: 0;
+              pointer-events: none;
+              transition: transform 0.4s;
+
+              &.active{
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+                pointer-events: all;
+              }
+
+              li{
+                padding: 10px 5px;
+
+                &:hover{
+                  background: $brand_color;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+    }
+}

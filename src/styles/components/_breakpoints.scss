@@ -1,0 +1,25 @@
+@mixin cont-name($w) {
+    .container {
+        max-width: $w;
+    }
+}
+
+@include xxl{
+    @include cont-name($xl)
+}
+
+@include xl{
+    @include cont-name($lg)
+}
+
+@include lg{
+    @include cont-name($md)
+}
+
+@include md{
+    @include cont-name($sm)
+}
+
+@include sm{
+    @include cont-name(100%)
+}

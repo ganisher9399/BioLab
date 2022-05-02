@@ -1,0 +1,104 @@
+@import '../../../styles/components/_vars.scss';
+@import '../../../styles/components/_mixins.scss';
+
+.choose-us{
+    padding: 0 0 134px 0;
+    .container{
+
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       //Media
+       @include lg{
+         flex-direction: column;
+       }
+       .subtitle{
+         //Media
+         @include xl{
+           font-size: 20px;
+         }
+         @include lg{
+            font-size: 25px;
+            width: 100%;
+         }
+         @include md{
+            font-size: 20px;
+         } 
+       }
+       .title{
+         //Media
+         @include xl{
+            font-size: 50px;
+         }
+         @include lg{
+            font-size: 70px;
+            width: 100%;
+         } 
+         @include md{
+            font-size: 40px;
+         }           
+       }
+       .text{
+         //Media
+         @include xl{
+            font-size: 16px;
+         }  
+         @include lg{
+            font-size: 18px;
+          
+         }  
+         @include md{
+            font-size: 16px;
+         }          
+       }
+       
+       .choose-us-img{
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 29px;
+         //Media
+         @include xl{
+            gap: 40px;
+         }
+         @include lg{
+            width: 100%;
+            flex-direction: row;
+            padding-top: 30px;
+         }
+         @include md{
+            flex-direction: column;
+            padding-top: 40px;
+         }
+         @include sm{
+            gap: 20px;
+         }
+
+          img{
+            border-radius: 10px;
+            &:nth-child(1){
+               width: 95%;
+               //Media
+               @include lg{
+                  width: 48%;
+               }
+               @include md{
+                  width: 100%;
+               }
+            }
+            &:nth-child(2){
+               width: 100%;
+               //Media
+               @include lg{
+                  width: 48%;
+               }
+               @include md{
+                  width: 100%;
+               }
+            }           
+          }
+       }
+    }
+}
