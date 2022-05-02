@@ -31,7 +31,10 @@ export default {
 
 .the-title{
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .subtitle{
        font-size: 25px;
@@ -40,7 +43,9 @@ export default {
     }
 
     .title{
-       font-size: 40px;
+      font-size: 40px;
+      max-width: 700px;
+      text-align: center;
     }
 }    
 </style>
