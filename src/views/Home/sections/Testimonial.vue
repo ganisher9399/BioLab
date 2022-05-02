@@ -1,7 +1,7 @@
 <template>
   <section class="testimonial">
       <div class="container">
-        
+         <TheTitle :sub="sub" :title="title" />
       </div>
   </section>
 </template>
@@ -11,7 +11,13 @@
 import TheTitle from '../../../layouts/TheTitle.vue';
 
 export default {
-  components: {TheTitle,}    
+  components: {TheTitle,},
+  data(){
+    return {
+      sub: 'Testimonial',
+      title: 'We Care About Our Customers Experience Too',
+    }
+  }    
 }
 </script>
 
