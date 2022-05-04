@@ -3,12 +3,84 @@
 
 .testimonial{
     background: $dark;
-    padding: 100px 0  150px 0;
+    padding: 100px 0  0 0;
 
     .container{
         .the-title{
             h2{
                 color: $white;
+            }
+        }
+
+        .customers{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 142px 0;
+
+            //Media
+            @include xl{
+              justify-content: center;  
+              gap: 100px;
+            }
+
+
+
+            .customers_box{
+                width: 520px;
+                height: 300px;
+                background: rgba($white, $alpha: 0.1);
+                border-radius: 10px;
+                padding:90px 55px 55px 55px;
+                position: relative;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: space-between;
+                // align-items: flex-start;
+
+                //Media
+                @include sm{
+                 padding: 60px 20px 20px 20px;   
+                }
+
+                &:hover{
+                    transform: translateY(-30px);
+                    transition: 0.4s;
+                    background: $brand_color;
+                    padding:80px 45px 45px 45px;
+                }
+
+                img{
+                    position: absolute;
+                    top: -25%;
+                    left: 0;
+                }
+                p{
+                    font-family: 'Circe';
+                    font-weight: 400;
+                    color: $white;
+
+                    //Medea
+                    @include sm{
+                        font-size: 16px;
+                    }
+                }
+                h6{
+                    font-family: 'Circe';
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 27px;
+                    color: $white;
+                    margin-top: 50px;
+                    //Medea
+                    @include sm{
+                      margin-top: 30px; 
+                      
+                    }
+                }
+       
             }
         }
     }
