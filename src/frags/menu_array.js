@@ -1,22 +1,42 @@
 export default  [
         {
-          text: 'About us',
+          text: {
+            en: 'About us',
+            ru: 'О нас',
+            uz: 'Biz haqimizda',
+          },
           link: 'About',
         },
         {
-          text: 'Catalog',
+          text: {
+            en: 'Catalog',
+            ru: 'Каталог',
+            uz: 'Katalog',
+          },
           link: 'Catalog',
         },
         {
-          text: 'Partners',
+          text: {
+            en: 'Partners',
+            ru: 'Партнеры',
+            uz: 'Hamkorlar',
+          },
           link: 'Partners',
         },
         {
-          text: 'Blog',
+          text: {
+            en: 'Blog',
+            ru: 'Блог',
+            uz: 'Blog',
+          },
           link: 'Blog',
         },
         {
-          text: 'Contact Us',
+          text: {
+            en: 'Contact Us',
+            ru: 'Связаться с нами',
+            uz : 'Boglanish'
+          },
           link: 'Contacts',
         },                                
       ]

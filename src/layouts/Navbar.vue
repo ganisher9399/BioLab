@@ -10,7 +10,7 @@
             </div>
             <ul class="menu" v-if="!is_mobile">
               <li v-for="item in menu_array" :key="item.text">
-                <router-link class="link" :to="{ name: item.link }" >{{ item.text }}</router-link>
+                <router-link class="link" :to="{ name: item.link }" >{{ item.text[leng] }}</router-link>
               </li>
             </ul>
 
@@ -18,7 +18,7 @@
               <ul>
                 <li v-for="item in menu_array" :key="item.text">
                   <router-link class="link" :to="{ mame: item.link }">
-                        {{ item.text }}
+                        {{ item.text[leng] }}
                   </router-link>
                 </li>
               </ul>
@@ -32,19 +32,21 @@
               <div class="search" >
                 <i class="fas fa-search"  v-if="!is_mobile"></i>
               </div>
-
+        <!-- leng start -->
               <div class="language" @click="toggleDropdown">
-                <span>eng</span>
+                <span>{{lengs}}</span>
                 <i 
                 class="fas fa-angle-down"
                 :style="{ transform: is_dropdown_open ? 'rotate(180deg)' : 'rotate(0deg)'  }"
                 ></i>
                 
                 <ul class="dropdown" :class="{ active: is_dropdown_open }" >
-                  <li>RUS</li>
-                  <li>UZB</li>
+                  <li @click="uzbb">UZB</li>
+                  <li @click="russ">RUS</li>
+                  <li @click="engg">ENG</li>
                 </ul>
               </div>
+        <!-- leng end -->        
             </div>
 
             <div class="burger" v-if="is_mobile" @click="is_menu_open = !is_menu_open">
@@ -61,6 +63,7 @@
 import menu from '@/frags/menu_array.js'
 import burgerBtn from './_burger-btn.vue'
 
+
 export default {
   components: {
     burgerBtn,
@@ -73,9 +76,23 @@ export default {
       menu_array: menu,
       breakpoint_width: 970,
       is_navber_active: false,
+      leng: 'en',
+      lengs: 'eng'
     }
   },
   methods: {
+    russ() {
+      this.lengs = 'rus';
+      this.leng = 'ru'
+    },
+    uzbb() {
+      this.lengs = 'uzb';
+      this.leng = 'uz'
+    },   
+    engg() {
+      this.lengs = 'eng';
+      this.leng = 'en'
+    },     
     toggleDropdown() {
       this.is_dropdown_open = !this.is_dropdown_open
     },
@@ -89,6 +106,7 @@ export default {
         this.is_mobile = false
         this.is_menu_open = false
     },
+
   },
   mounted() {
     this.checkWindowWidth()
