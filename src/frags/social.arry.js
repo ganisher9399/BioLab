@@ -1,19 +1,19 @@
 export default [
     {
         icon: 'fab fa-facebook',
-        link: '#',
+        link: 'https://www.instagram.com/akhmadov_ganisher/',
     },
     {
         icon: 'fab fa-twitter',
-        link: '#',
+        link: 'https://www.instagram.com/akhmadov_ganisher/',
     },
     {
         icon: 'fab fa-instagram',
-        link: '#',
+        link: 'https://www.instagram.com/akhmadov_ganisher/',
     },
     {
         icon: 'fab fa-telegram',
-        link: '#',
+        link: 'https://www.instagram.com/akhmadov_ganisher/',
     },        
         
 ]

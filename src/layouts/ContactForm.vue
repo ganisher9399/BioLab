@@ -14,9 +14,9 @@
             </ul>
         </div>
 
-        <form @click.prevent class="form">
-            <input class="input" type="email" placeholder="Enter your Email ...">
-            <textarea class="input" placeholder="Enter your comments ..."></textarea>
+        <form class="form" @submit.prevent="sendComment">
+            <input class="input" type="email" placeholder="Enter your Email ..." v-model="gm">
+            <textarea class="input" placeholder="Enter your comments ..." v-model="com"></textarea>
             <div class="form-btn">
               <TheButton> Send </TheButton>
             </div>
@@ -36,7 +36,20 @@ export default {
    data(){
       return {
         socials: social_array, 
+        tokin: '5247852882:AAH-v3nzD-kFRm1P9M4D2P-iGuMBOrcGfBg',
+        chatId: '-649993032',
+        gm: '',
+        com: '',
       }
+   },
+   methods:{
+       async sendComment(){
+           const gmail = JSON.stringify('Email: '+this.gm);
+           const comment = JSON.stringify('Comment : '+this.com);
+           await fetch(`https://api.telegram.org/bot${this.tokin}/sendMessage?chat_id=${this.chatId}&parse_mode=html&text=${gmail} ${comment}`);
+           this.gm = '';
+           this.com = '';
+       }
    } 
 }
 </script>
