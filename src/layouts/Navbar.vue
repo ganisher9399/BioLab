@@ -10,15 +10,17 @@
             </div>
             <ul class="menu" v-if="!is_mobile">
               <li v-for="item in menu_array" :key="item.text">
-                <router-link class="link" :to="{ name: item.link }" >{{ item.text[leng] }}</router-link>
+                <router-link class="link" :to="{ name: item.link }" >
+                  {{ item.text[lengs] }}
+                </router-link>
               </li>
             </ul>
 
             <div class="mobile-menu" v-if="is_mobile" :class="{ active: is_menu_open}">
               <ul>
-                <li v-for="item in menu_array" :key="item.text">
-                  <router-link class="link" :to="{ mame: item.link }">
-                        {{ item.text[leng] }}
+                <li v-for="itemkk in menu_array" :key="itemkk.text">
+                  <router-link class="link" :to="{ name: itemkk.link }">
+                        {{ itemkk.text[lengs] }}
                   </router-link>
                 </li>
               </ul>
@@ -76,22 +78,22 @@ export default {
       menu_array: menu,
       breakpoint_width: 970,
       is_navber_active: false,
-      leng: 'en',
-      lengs: 'eng'
+      lengs: 'en',
+      // lengs: 'eng'
     }
   },
   methods: {
     russ() {
-      this.lengs = 'rus';
-      this.leng = 'ru'
+      // this.lengs = 'rus';
+      this.lengs = 'ru'
     },
     uzbb() {
-      this.lengs = 'uzb';
-      this.leng = 'uz'
+      // this.lengs = 'uzb';
+      this.lengs = 'uz'
     },   
     engg() {
-      this.lengs = 'eng';
-      this.leng = 'en'
+      // this.lengs = 'eng';
+      this.lengs = 'en'
     },     
     toggleDropdown() {
       this.is_dropdown_open = !this.is_dropdown_open
@@ -115,7 +117,9 @@ export default {
       window.pageYOffset > 0 ? this.is_navber_active = true : this.is_navber_active = false
       
     })
-  }, 
+  },
+
+
 
 }
 </script>

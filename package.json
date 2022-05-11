@@ -13,7 +13,7 @@
     "vue-audio-visual": "^2.4.1",
     "vue-awesome": "^4.5.0",
     "vue-awesome-swiper": "^4.1.1",
-    "vue-i18n": "^3.1.1",
+    "vue-i18n": "^8.27.1",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2"
   },

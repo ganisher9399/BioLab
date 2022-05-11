@@ -1,7 +1,7 @@
 <template>
    <section class="home-partners">
       <div class="container">
-        <TheTitle :sub="sub" :title="title" />
+        <TheTitle :sub="langsubtitle.sub[lengss]" :title="langsubtitle.title[lengss]" />
 
         <div class="slider">
           <swiper ref="mySwiper" :options="swiperOptions">
@@ -28,14 +28,28 @@ import 'swiper/css/swiper.css'
 
 
 export default {
-   components: { TheTitle, Swiper, SwiperSlide},
-  
+  components: { TheTitle, Swiper, SwiperSlide},
+
 
    data(){
     return {
    
-      sub: 'Partners',
-      title: 'Our new partner',
+      langsubtitle: {
+       sub: {
+          en: 'Partners',
+          ru: 'Партнеры',
+          uz: 'Hamkorlar',
+       },
+       title: {
+          en: 'Our new partner',
+          ru: 'Наш новый партнер',
+          uz: 'Bizning yangi hamkorimiz',
+       }
+      },
+
+      lengss: 'en',
+    
+
       swiperOptions: {
         pagination: { el: '.swiper-pagination' },
         slidesPerView: 4,
