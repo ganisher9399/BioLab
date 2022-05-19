@@ -30,6 +30,11 @@ export default {
   box-shadow: -15px 20px 50px rgba(29, 104, 191, 0.3);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  &:active{
+    box-shadow: none;
+    transform: scale(0.95);
+    transition: 0.1s;
+  }
   //Meda
   @include lg{
     font-size: 14px;

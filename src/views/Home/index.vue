@@ -5,6 +5,7 @@
       <ChooseUser />
       <Products />
       <Testimonial />
+      <BlogSection />
     </div>
 </template>
 
@@ -16,6 +17,7 @@ import HomePartners from './sections/HomePartners.vue';
 import ChooseUser from './sections/ChooseUs.vue';
 import Products from './sections/Products.vue';
 import Testimonial from './sections/Testimonial.vue';
+import BlogSection from './sections/BlogSection.vue';
 
 export default {
   components: {
@@ -24,6 +26,7 @@ export default {
     ChooseUser,
     Products,
     Testimonial,
+    BlogSection,
   },
 
     

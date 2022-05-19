@@ -79,20 +79,16 @@ export default {
       breakpoint_width: 970,
       is_navber_active: false,
       lengs: 'en',
-      // lengs: 'eng'
     }
   },
   methods: {
     russ() {
-      // this.lengs = 'rus';
       this.lengs = 'ru'
     },
     uzbb() {
-      // this.lengs = 'uzb';
       this.lengs = 'uz'
     },   
     engg() {
-      // this.lengs = 'eng';
       this.lengs = 'en'
     },     
     toggleDropdown() {

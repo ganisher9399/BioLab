@@ -1,0 +1,127 @@
+@import '../../../styles/components/_vars.scss';
+@import '../../../styles/components/_mixins.scss';
+
+.blog_section{
+   padding: 90px 0;
+   //Media
+   @include xl{
+      padding: 50px 0;
+   } 
+   .container{
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+      @include xl{
+         gap: 40px
+      } 
+      .buttons{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+      }
+      .father_box{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: wrap;
+         //Media  
+         @include xxl{
+            justify-content: space-around;
+         }
+       
+         
+         .blog_box{
+         width: 520px;
+         height: 500px;
+         border-radius: 10px;
+         background: $white;
+         position: relative;
+         overflow: hidden;
+         display: flex;
+         justify-content: center;
+         align-items: flex-end;
+         margin-top: 40px;
+         //Media
+         @include xl{
+            width: 430px;
+            height: 400px;
+         }
+         @include lg{
+            width: 520px;
+            height: 500px;
+         }  
+         @include sm{
+            margin-top: 30px;
+            height: 400px;
+         }       
+
+         &:hover{
+            filter: drop-shadow(-15px 30px 60px rgba(0, 0, 0, 0.25));
+            transform:scale(1.04);
+            transition: 0.4s;
+            .box{
+               background: $brand_color;
+               transition: 0.4s;
+               h4{
+                  color: rgba($white, $alpha: 0.7);
+                  transition: 0.4s;
+               }
+            }
+         }
+         img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            
+         }
+         .box{
+            position: absolute;
+            width: 425px;
+            height: 120px;
+            background: $white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include xl{
+               width: 380px;
+               height: 110px;
+               margin-bottom: 30px;
+            }
+            @include lg{
+               width: 425px;
+               height: 120px;
+               margin-bottom: 45px;
+            }  
+            @include sm{
+               width: 85%;
+               height: 120px;
+               margin-bottom: 20px;
+               padding: 25px;
+               
+            }  
+            @include xs{
+               width: 85%;
+               height: 120px;
+               margin-bottom: 20px;
+               padding: 20px;
+               
+            }  
+            p{
+               font-family: 'Montserrat';
+               font-size: 12px;
+               color:rgba($black, $alpha: 0.7);
+               line-height: 15px;
+            }
+            h4{
+               font-family: 'Montserrat';
+               font-size: 15px;
+               line-height: 17px;
+            }
+         }
+       }
+      }
+   }
+}
