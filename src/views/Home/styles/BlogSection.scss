@@ -18,6 +18,9 @@
         display: flex;
         justify-content: center; 
         align-items: center;
+        span{
+           border-radius: 40px;
+        }
       }
       .father_box{
          display: flex;
