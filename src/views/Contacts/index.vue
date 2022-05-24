@@ -1,19 +1,24 @@
 <template>
    <section class="section-contacts">
-       <h1>contact contact contactcontact</h1>
+      <TheTitle />
+      <Contact />
    </section>
 </template>
 
 
 <script>
+import TheTitle from './sections/The-title.vue'
+import Contact from './sections/Contact-info.vue'
+
 export default {
-    
+  components: { TheTitle, Contact },
+ 
 }
 </script>
 
 
 <style lang="scss">
     .section-contacts{
-        height: 100vh;
+        height: 200vh;
     }
 </style>
