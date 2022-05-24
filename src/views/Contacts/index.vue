@@ -18,7 +18,8 @@ export default {
 
 
 <style lang="scss">
-    .section-contacts{
-        height: 200vh;
-    }
+  .section-contacts{
+    width: 100%;
+    padding: 100px 0;
+  }
 </style>

@@ -21,7 +21,7 @@ export default {
     .container{
         text-align: center;
         width: 100%;
-        padding: 210px 50px;
+        padding: 120px 0 50px 0;
         p{ 
             font-family: $font_family;
             font-size: 20px;

@@ -15,10 +15,6 @@
     <div class="maps" v-html="countries[activeBtn].map"></div>
 
     <div class="dal">
-      <div class="left">
-        <div class="flag">
-          <img :src="countries[activeBtn].flag" alt="flag" />
-        </div>
         <div class="box">
           <h3>Address</h3>
           <a :href="countries[activeBtn].address.link" target="_blank">{{
@@ -41,7 +37,6 @@
             countries[activeBtn].website.text
           }}</a>
         </div>
-      </div>
     </div>
   
   </div>
@@ -124,6 +119,39 @@ export default {
 <style lang="scss" scoped>
 @import "../../../styles/components/_vars.scss";
 @import "../../../styles/components/_mixins.scss";
+
+
+.dal{
+  padding: 60px 120px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  gap: 30px 40px;
+  width: 100%;
+  flex-wrap: wrap;
+  .box{
+    width: 40%;
+    h3{
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 52px;
+      text-transform: uppercase;
+      color: $black;
+      margin-bottom: 20px;
+    }
+    a{
+      font-family: $font_family;
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 30px;
+      color: $brand_color;
+
+    }
+  }
+}
+
+
+
 
 .maps {
   width: 100%;
