@@ -22,12 +22,23 @@ export default {
         text-align: center;
         width: 100%;
         padding: 120px 0 50px 0;
+        //Media
+        @include lg{
+          padding: 80px 0 40px 0;  
+        }
         p{ 
             font-family: $font_family;
             font-size: 20px;
             line-height: 24px;
             color: $brand_color;
             margin-bottom: 30px;
+            //Media
+            @include lg{
+                font-size: 16px;  
+            }
+            @include sm{
+                margin-bottom: 20px;  
+            }            
         }
         h1{
             font-family: 'Circe';
@@ -36,6 +47,10 @@ export default {
             line-height: 120%;
             text-transform: capitalize;
             color: $black;
+            //Media
+            @include lg{
+                font-size: 40px;  
+            }            
         }
   
     }

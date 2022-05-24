@@ -58,17 +58,17 @@ export default {
         {
           name: "United Kigdom",
           address: {
-            text: "Tashkent, Nmadir City, Uzbekistan",
+            text: "United Kingdom of Great Britain and Northern Ireland.",
             link: "https://goo.gl/maps/wSv9bHdALszfRMjMA",
           },
           Phone: {
-            text: "+998(33)555-11-23",
+            text: "+(1) 9999-555-11-23",
             link: "+998335551123",
           },
-          email: "uzb@example.com",
+          email: "united@examples.com",
           website: {
-            text: "hoshim.uz",
-            link: "https://google.com",
+            text: "https://www.britannica.com",
+            link: "https://www.britannica.com/place/United-Kingdom",
           },
           flag: require("../../../views/Contacts/styles/flas/GB-United-Kingdom-Flag.png"),
           map:'<iframe style="width:100%; height:100%; border: none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1323160.6061110066!2d-3.598240648196294!3d55.04699912828093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x25a3b1142c791a9%3A0xc4f8a0433288257a!2z0JLQtdC70LjQutC-0LHRgNC40YLQsNC90LjRjw!5e0!3m2!1sru!2sus!4v1653398948612!5m2!1sru!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
@@ -76,17 +76,17 @@ export default {
         {
           name: "Uzbekistan",
           address: {
-            text: "Kandagar, terror City, Avganistan",
+            text: "Kandagar, terror City, Avganistan, Bukhara city",
             link: "https://goo.gl/maps/YY9CgfX24xnseFtt6",
           },
           Phone: {
-            text: "+01(33)555-11-23",
-            link: "+018335551123",
+            text: "+998(88) 183-68-68",
+            link: "+998881836868",
           },
-          email: "angan@example.com",
+          email: "ganisher9399@gmail.com",
           website: {
-            text: "gani.uz",
-            link: "https://google.com",
+            text: "BioLab.com",
+            link: "https://biolabss.netlify.app",
           },
           flag: require("../../../views/Contacts/styles/flas/uzbekistan-flag.png"),
           map: '<iframe style="width:100%; height:100%; border: none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6139271.026930727!2d60.083608772312225!3d41.2938305447332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b20a5d676b1%3A0xca0a6dad7e841e20!2z0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2sus!4v1653399224407!5m2!1sru!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
@@ -94,16 +94,16 @@ export default {
         {
           name: "Kazakhstan",
           address: {
-            text: "Zembabi, Black City, Afrika",
+            text: "The country dominates Central Asia economically and politically",
             link: "https://goo.gl/maps/pSNYnnKKQYt75aet9",
           },
           Phone: {
-            text: "+5(33)555-11-23",
-            link: "+5335551123",
+            text: "+996(22) 939-44-44",
+            link: "+996229394444",
           },
-          email: "afr@example.com",
+          email: "shishingni@sani.com",
           website: {
-            text: "afrik.uz",
+            text: "cazac.com",
             link: "https://google.com",
           },
           flag: require("../../../views/Contacts/styles/flas/kazakhstan-flag.png"),
@@ -121,6 +121,10 @@ export default {
 @import "../../../styles/components/_mixins.scss";
 
 
+.container{
+  width: 100%;
+}
+
 .dal{
   padding: 60px 120px;
   display: flex;
@@ -129,8 +133,28 @@ export default {
   gap: 30px 40px;
   width: 100%;
   flex-wrap: wrap;
+  //Media
+  @include lg{
+    padding: 40px 0;
+    gap: 20px 30px;
+  }
+  @include sm{
+    padding: 25px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }  
   .box{
     width: 40%;
+    //Media
+    @include lg{
+      width: 45%;
+    }
+    @include sm{
+      width: 100%;
+    }    
     h3{
       font-weight: 700;
       font-size: 40px;
@@ -138,6 +162,14 @@ export default {
       text-transform: uppercase;
       color: $black;
       margin-bottom: 20px;
+      //Media
+      @include lg{
+        font-size: 35px;
+      }
+      //Media
+      @include sm{
+        font-size: 30px;
+      }      
     }
     a{
       font-family: $font_family;
@@ -145,6 +177,13 @@ export default {
       font-size: 25px;
       line-height: 30px;
       color: $brand_color;
+      //Media
+      @include lg{
+        font-size: 20px;
+      }
+      @include sm{
+        font-size: 16px;
+      }             
 
     }
   }
@@ -160,6 +199,15 @@ export default {
   border-radius: 5px;
   overflow: hidden;
   margin-top: 64px;
+  //Media
+  @include lg{
+    margin-top: 50px;
+    height: 450px;
+  }  
+  @include sm{
+    margin-top: 40px;
+    height: 380px;
+  }
 }
 
 
@@ -167,6 +215,21 @@ export default {
   display: flex;
   justify-content: center;
   gap: 42px;
+  //Media
+  @include lg{
+    gap: 10px;
+  }
+  @include md{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  } 
+  @include sm{
+    gap: 20px;
+  }   
+
 }
 
 .btns button {
@@ -181,17 +244,36 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  //Media
+  @include lg{
+    gap: 10px;
+    width: 320px;
+    padding: 10px 20px;
+  }
+  @include sm{
+    width: 280px;
+    padding: 8px 15px;
+    gap: 5px;
+  }  
   span {
     font-family: $font_family;
     font-weight: $font_weight;
     font-size: 25px;
     line-height: 30px;
     color: #000;
+    //Media
+    @include lg{
+      font-size: 20px;
+    }
+    @include sm{
+      font-size: 18px;
+    } 
   }
 }
 
 .btns button.active {
   background: #2268c8;
+  box-shadow: -10px 40px 60px rgba(0, 0, 0, 0.25);
 }
 .btns button.active > span {
   color: rgb(255, 255, 255);
