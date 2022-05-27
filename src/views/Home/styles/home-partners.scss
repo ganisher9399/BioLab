@@ -1,37 +1,33 @@
 @import '../../../styles/components/_vars.scss';
 @import '../../../styles/components/_mixins.scss';
-
-.home-partners{
-    .slider{
+.home-partners {
+    .slider {
         padding: 70px 0;
+        .swiper-wrapper {
+            transition-timing-function: linear;
+        }
         //Media
-        @include xxl{
+        @include xxl {
             padding: 35px 0;
         }
-  
     }
-
-    &::selection{
+    &::selection {
         display: none;
     }
-    
-    .swiper-slide{
+    .swiper-slide {
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
         height: 150px;
-        img{
-          //Media  
-          @include sm{
-            width: 70%;
-            height: 60%;
-          }
+        img {
+            //Media  
+            @include sm {
+                width: 70%;
+                height: 60%;
+            }
         }
-
-
     }
-
-    .swiper-l-r{
+    .swiper-l-r {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -39,58 +35,52 @@
         height: 56px;
         margin: 44px 0;
         //Media 
-        @include xl{
+        @include xl {
             margin: 30px 0;
             height: 40px;
         }
-        @include md{
+        @include md {
             margin: 10px 0;
         }
-        .swiper-pagination{
+        .swiper-pagination {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
             //Media
-            @include sm{
+            @include sm {
                 gap: 10px
             }
-            .swiper-pagination-bullet{
+            .swiper-pagination-bullet {
                 width: 36px;
                 height: 4px;
                 background: rgba($black, $alpha: 0.7);
                 border-radius: 0;
-
                 //Media 
-                @include xl{
+                @include xl {
                     width: 20px;
                 }
-                @include md{
+                @include md {
                     width: 5px;
                     height: 5px;
                     border-radius: 50%;
                 }
             }
-
-            .swiper-pagination-bullet-active{
+            .swiper-pagination-bullet-active {
                 width: 35px;
                 height: 8px;
                 background: $brand_color;
-
                 //Media 
-                @include xl{
+                @include xl {
                     width: 20px;
                     height: 6px;
                 }
-                @include md{
-                   
+                @include md {
                     width: 8px;
                     height: 8px;
                     border-radius: 50%;
                 }
             }
-
-           
         }
     }
 }

@@ -54,7 +54,8 @@ export default {
         pagination: { el: '.swiper-pagination' },
         slidesPerView: 4,
         loop: true,
-	      autoplay: { delay: 2000 },
+        speed: 5000,
+	      autoplay: { delay: 0},
         breakpoints: {
           0: {
             slidesPerView: 1,
