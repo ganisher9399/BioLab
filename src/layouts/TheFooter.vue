@@ -10,7 +10,8 @@
           <div class="container">
             <div class="item">
               <div class="logo">
-                  <h2>ItLabs</h2>
+                  <img src="../images/logo/logo.png" alt="">
+                  <h2>Bio Lab</h2>
               </div>
 
               <p class="text">Copyright &copy; 2020 BioLab</p>

@@ -8,6 +8,7 @@
                 <span>Bio Lab</span>
               </a>
             </div>
+
             <ul class="menu" v-if="!is_mobile">
               <li v-for="item in menu_array" :key="item.text">
                 <router-link class="link" :to="{ name: item.link }" >
@@ -18,7 +19,7 @@
 
             <div class="mobile-menu" v-if="is_mobile" :class="{ active: is_menu_open}">
               <ul>
-                <li v-for="itemkk in menu_array" :key="itemkk.text">
+                <li v-for="itemkk in menu_array" :key="itemkk.text" @click="is_menu_open = !is_menu_open">
                   <router-link class="link" :to="{ name: itemkk.link }">
                         {{ itemkk.text[lengs] }}
                   </router-link>
