@@ -4,7 +4,7 @@ export default [
         btn: {
             name: "History of the company",
             title: "When, while lovely valley teems with vapour around meand",
-            link: '/button',
+            link: 'Team'
         },
     },
     {

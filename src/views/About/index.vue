@@ -2,6 +2,7 @@
    <section class="section-contacts">
       <TheTitle />
       <Contact />
+      <router-view/>
    </section>
 </template>
 

@@ -5,7 +5,8 @@
         v-for="(country, idx) in countries"
         :key="country.name"
         :class="{ active: activeBtn === idx }"
-        @click="activeBtn = idx"
+        @click="foo(idx)"
+
       >
      
         <span> {{ country.btn.name }}</span>
@@ -33,6 +34,11 @@ export default {
       countries: Array,
     };
   },
+  methods: {
+    foo(idx){
+        this.activeBtn = idx
+    }
+  }
 };
 </script>
 
