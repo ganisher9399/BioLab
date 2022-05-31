@@ -44,11 +44,15 @@ export default {
    },
    methods:{
        async sendComment(){
-           const gmail = JSON.stringify('Email: '+this.gm);
-           const comment = JSON.stringify('Comment : '+this.com);
-           await fetch(`https://api.telegram.org/bot${this.tokin}/sendMessage?chat_id=${this.chatId}&parse_mode=html&text=${gmail} ${comment}`);
-           this.gm = '';
-           this.com = '';
+           if(this.gm.length>0 || this.com.length>0){
+                const gmail = JSON.stringify('Email: '+this.gm);
+                const comment = JSON.stringify('Comment : '+this.com);
+                await fetch(`https://api.telegram.org/bot${this.tokin}/sendMessage?chat_id=${this.chatId}&parse_mode=html&text=${gmail} ${comment}`);
+                this.gm = '';
+                this.com = '';
+           }else{
+               return
+           }
        }
    } 
 }
